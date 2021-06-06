@@ -3,16 +3,17 @@ import { Sprite } from "nes-react";
 
 import { AuthContext } from "../../util/context/context";
 
-const ProfilePage = (props) => {
+const ProfilePage = () => {
   const { user } = useContext(AuthContext);
   console.log(user);
   return (
     <div>
       <h1>{user.username}</h1>
       <Sprite sprite='charmander'/>
-      <div>
-        <h3></h3>
-      </div>
+      <p>banner message</p>
+      <div className='page-Spacer'/>
+      <br/>
+      <p>profile page banner</p>
     </div>
   );
 };

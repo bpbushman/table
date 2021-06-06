@@ -41,6 +41,7 @@ function authReducer(state, action) {
 
 function AuthProvider(props) {
   const [state, dispatch] = useReducer(authReducer, initialState);
+
   function login(userData) {
     localStorage.setItem("token", userData.token);
     dispatch({
@@ -48,10 +49,12 @@ function AuthProvider(props) {
       payload: userData,
     });
   }
+
   function logout() {
     localStorage.removeItem("token");
     dispatch({ type: "LOGOUT" });
   }
+  
   return (
     <AuthContext.Provider
       value={{ user: state.user, login, logout }}
