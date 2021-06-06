@@ -1,0 +1,29 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: max-content;
+  background-color: #51a7ad;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.login-container input {
+  margin: 4px;
+}
+
+.login-container h3 {
+  text-align: center;
+  margin: auto;
+}
+h3 {
+  margin: 24px;
+}
+button {
+  position: absolute;
+}
+
+.errors-container {
+  margin: 24px;
+  color: red;
+  width: max-content;
+}

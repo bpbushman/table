@@ -1,0 +1,15 @@
+.card-container {
+    
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    width: min-content;
+    margin: 24px;
+    padding: 8px
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: fit-content;
+}

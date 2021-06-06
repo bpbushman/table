@@ -1,0 +1,14 @@
+.link-bar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.links {
+    padding: .5rem;
+}
+
+.link-bar-container h4:hover {
+    color: whitesmoke
+  } 
+

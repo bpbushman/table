@@ -1,0 +1,10 @@
+.create {
+  margin: 40px !important;
+  width: 32%;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 8px;
+  justify-content: space-around;
+}

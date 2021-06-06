@@ -1,0 +1,12 @@
+.logged-out {
+    display: flex;
+    
+    justify-content: center;
+}
+.cat {
+    margin: 32px;
+}
+.cat:hover {
+    width: 40px !important; 
+    height: 40px !important;
+}

@@ -1,0 +1,29 @@
+.comment-area {
+  display: flex;
+  width: min-content;
+  padding: auto;
+  margin: 4px;
+  border: none;
+  vertical-align: middle;
+  outline-color: #e7e7e7;
+  box-shadow: 0 4px #212529, 0 -4px #212529, 4px 0 #212529, -4px 0 #212529;
+  background-color: #e7e7e7;
+}
+
+.comment-area:hover {
+  cursor: pointer;
+}
+
+.input-text {
+  border: none;
+}
+
+@media (max-width: 800px) {
+  .comment-area input {
+    margin: 10px 0;
+  }
+
+  .comment-area {
+    align-items: stretch;
+  }
+}
