@@ -43,6 +43,7 @@ export const GET_USERS = gql`
     getUsers {
       username
       id
+      banner
     }
   }
 `;
@@ -52,6 +53,7 @@ export const GET_FOLLOWED_USERS = gql`
     getFollowedUsers{
       username
       id
+      banner
     }
   }
 `;

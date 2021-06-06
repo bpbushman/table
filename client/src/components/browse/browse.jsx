@@ -20,6 +20,7 @@ const mapUsersToCards = (data, arr) => {
         userId={user.id}
         isFollowed={isFollowed}
         username={user.username}
+        banner={user.banner}
       />
     );
   });

@@ -11,7 +11,10 @@ const UserCard = (props) => {
     update(_, result) {
       console.log(result);
     },
-    variables: {username: props.username, userId: props.userId}
+    variables: {
+      username: props.username,
+      userId: props.userId,
+    },
   });
 
   const handleFollow = () => {
@@ -30,6 +33,7 @@ const UserCard = (props) => {
         />
       </div>
       <Sprite sprite="charmander" />
+      <p>{props.banner}</p>
     </div>
   );
 };
