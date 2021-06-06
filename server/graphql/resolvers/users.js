@@ -143,7 +143,7 @@ module.exports = {
       };
     },
 
-    async setBio(_, { body }, context, __) {
+    async setProfileBio(_, { body }, context, __) {
       const user = checkAuth(context);
       const currentUser = await User.findById(user.id);
       if (body.trim() === '') {
@@ -154,6 +154,14 @@ module.exports = {
         })
       }
       currentUser.bio = body;
+      await currentUser.save();
+      return currentUser;
+    },
+
+    async setProfileBanner(_, { body }, context, __) {
+      const user = checkAuth(context);
+      const currentUser = await User.findById(user.id);
+      currentUser.banner = body;
       await currentUser.save();
       return currentUser;
     }

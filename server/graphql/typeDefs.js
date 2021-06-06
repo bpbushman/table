@@ -54,6 +54,8 @@ module.exports = gql`
     likePost(postId: ID!): Post!
     followUser(userId: ID!, username: String!): String!
     unFollowUser(userId: ID!): String!
-    setBio(body: String!): User!
+    setProfileBio(body: String!): User!
+    setProfileBanner(body: String!): User!
+    setIntersts(body: String!): User!
   }
 `;

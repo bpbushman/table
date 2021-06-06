@@ -9,7 +9,7 @@ const userSchema = new Schema({
   banner: String,
   interests: [String],
   posts: [
-     {
+    {
       type: Schema.Types.ObjectId,
       ref: "Post"
     },
