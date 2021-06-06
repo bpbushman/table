@@ -12,7 +12,7 @@ const LinkBar = () => {
       {user && (
         <div className="link-bar-container">
           <Link className="links" to="/browse">Users</Link>
-          <Link className="links" to="/">Profile</Link>
+          <Link className="links" to="/profile">Profile</Link>
           <Link className="links" to="newsfeed">NewsFeed</Link>
           <h4 className="links" onClick={logout}>Logout</h4>
         </div>
