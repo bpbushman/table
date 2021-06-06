@@ -9,6 +9,7 @@ const {
   validateRegisterInput,
   validateEmailInput,
 } = require("../../util/validators");
+const checkAuth = require("../../util/check-auth");
 
 // helper function that takes in a user
 // and generates a web token
@@ -110,6 +111,9 @@ module.exports = {
         username,
         password,
         timeStamp: new Date().toUTCString(),
+        bio: '',
+        interests: [''],
+        banner: ''
       });
       // save the new user to mongoDB
 
@@ -138,6 +142,21 @@ module.exports = {
         token,
       };
     },
+
+    async setBio(_, { body }, context, __) {
+      const user = checkAuth(context);
+      const currentUser = await User.findById(user.id);
+      if (body.trim() === '') {
+        throw new UserInputError('Empty Bio', {
+          errors: {
+            body: "Bio can't be empty"
+          }
+        })
+      }
+      currentUser.bio = body;
+      await currentUser.save();
+      return currentUser;
+    }
   },
 
   /*******************/

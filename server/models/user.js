@@ -5,6 +5,9 @@ const userSchema = new Schema({
   password: String,
   email: String,
   timeStamp: String,
+  bio: String,
+  banner: String,
+  interests: [String],
   posts: [
      {
       type: Schema.Types.ObjectId,

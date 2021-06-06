@@ -24,6 +24,9 @@ module.exports = gql`
     id: ID!
     email: String!
     username: String!
+    bio: String!
+    banner: String!
+    interests: String!
     token: String!
     timeStamp: String!
   }
@@ -51,5 +54,6 @@ module.exports = gql`
     likePost(postId: ID!): Post!
     followUser(userId: ID!, username: String!): String!
     unFollowUser(userId: ID!): String!
+    setBio(body: String!): User!
   }
 `;
