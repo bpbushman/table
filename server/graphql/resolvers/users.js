@@ -181,5 +181,14 @@ module.exports = {
         throw new Error(error);
       }
     },
+
+    async getUser(_, { userId }, ___, __) {
+      try {
+        const user = await User.findById(userId);
+        return user;
+      } catch (error) {
+        throw new Error(error);
+      }
+    }
   },
 };

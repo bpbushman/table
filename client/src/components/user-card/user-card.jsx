@@ -21,6 +21,7 @@ const UserCard = (props) => {
     followUser();
     setIsFollowed(!isFollowed);
   };
+
   return (
     <div className="card-container">
       <div className="title">

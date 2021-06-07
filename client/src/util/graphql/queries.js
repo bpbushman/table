@@ -38,6 +38,17 @@ export const GET_TIMELINE_POSTS = gql`
   }
 `;
 
+export const GET_USER = gql`
+  query getUser($userId: ID!) {
+    getUser(userId: $userId) {
+      username
+      id
+      banner
+      bio
+    }
+  }
+`;
+
 export const GET_USERS = gql`
   query getUsers {
     getUsers {

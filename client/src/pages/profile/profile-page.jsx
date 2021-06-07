@@ -1,19 +1,29 @@
 import React, { useContext } from "react";
+import { useQuery } from "@apollo/client";
 import { Sprite } from "nes-react";
 
 import { AuthContext } from "../../util/context/context";
+import { GET_USER } from "../../util/graphql/queries";
 
 const ProfilePage = () => {
   const { user } = useContext(AuthContext);
-  console.log(user);
-  return (
+  
+  const { loading, data } = useQuery(GET_USER, {
+    variables: { userId: user.id },
+    fetchPolicy: "no-cache",
+  });
+
+  if(loading) return <h1>loading....</h1>
+  const { banner, bio, username } = data.getUser;
+
+  return loading ? (<h1>loading....</h1>) : (
     <div>
-      <h1>{user.username}</h1>
-      <Sprite sprite='charmander'/>
-      <p>banner message</p>
-      <div className='page-Spacer'/>
-      <br/>
-      <p>profile page banner</p>
+      <h1>{username}</h1>
+      <Sprite sprite="charmander" />
+      <p>{banner}</p>
+      <div className="page-Spacer" />
+      <br />
+      <p>{bio}</p>
     </div>
   );
 };

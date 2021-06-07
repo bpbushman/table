@@ -41,8 +41,8 @@ module.exports = gql`
     getPost(postId: ID!): Post
     getTimelinePosts: [Post]!
     getUsers: [User]!
+    getUser(userId: ID!): User!
     getFollowedUsers: [User]!
-
   }
   type Mutation {
     register(registerInput: RegisterInput): User!
