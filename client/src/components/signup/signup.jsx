@@ -1,4 +1,3 @@
-import { Container, TextInput, Button } from "nes-react";
 import { useMutation } from "@apollo/client";
 import { useHistory } from "react-router-dom";
 import React, { useState, useContext } from "react";
@@ -56,9 +55,9 @@ const Signup = () => {
   return (
     <div>
       <h3>Register a new Account</h3>
-      <Container rounded="true" className="login-container">
+      <div rounded="true" className="login-container">
         <form onSubmit={onSubmit}>
-          <TextInput
+          <input
             type="text"
             placeholder="User name"
             name="username"
@@ -66,7 +65,7 @@ const Signup = () => {
             value={newUser.username}
           />
           <br />
-          <TextInput
+          <input
             type="text"
             placeholder="Email"
             name="email"
@@ -74,7 +73,7 @@ const Signup = () => {
             value={newUser.email}
           />
           <br />
-          <TextInput
+          <input
             type="password"
             placeholder="Password"
             name="password"
@@ -82,7 +81,7 @@ const Signup = () => {
             value={newUser.password}
           />
           <br />
-          <TextInput
+          <input
             type="password"
             placeholder="Confirm Password"
             name="confirmPassword"
@@ -90,9 +89,9 @@ const Signup = () => {
             value={newUser.confirmPassword}
           />
           <br />
-          <Button primary>{loading ? "loading..." : "Submit"}</Button>
+          <button primary>{loading ? "loading..." : "Submit"}</button>
         </form>
-      </Container>
+      </div>
       <Errors errors={errors} />
     </div>
   );
