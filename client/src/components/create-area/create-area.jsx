@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Container, TextArea, Button } from "nes-react";
 import { useMutation } from "@apollo/client";
 
 import { CREATE_POST } from "../../util/graphql/mutations";
@@ -44,17 +43,17 @@ const Create = () => {
 
   return (
     <div className="create">
-      <Container className="create-box" title="Create a post!">
+      <div className="create-box" title="Create a post!">
         <form onSubmit={submit}>
-          <TextArea onChange={handleChange} placeholder="Post" value={body} />
+          <textarea onChange={handleChange} placeholder="Post" value={body} />
           <div className="buttons">
-            <Button success>Submit</Button>
-            <Button onClick={cancel} error>
+            <button success>Submit</button>
+            <button onClick={cancel} error>
               Cancel
-            </Button>
+            </button>
           </div>
         </form>
-      </Container>
+      </div>
       <Errors errors={errors} />
     </div>
   );
