@@ -23,7 +23,8 @@ const mapPostsToComponent = (data) => {
 };
 
 const Feed = () => {
-  const { loading, data, error } = useQuery(GET_TIMELINE_POSTS, {fetchPolicy: "no-cache"});
+  const { loading, data, error } = useQuery(GET_TIMELINE_POSTS);
+  console.log(data.getTimelinePosts.comments)
   if (loading) return <p>loading...</p>;
   if (error) {
     console.log(error);

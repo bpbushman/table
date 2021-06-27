@@ -47,8 +47,8 @@ const Create = () => {
         <form onSubmit={submit}>
           <textarea onChange={handleChange} placeholder="Post" value={body} />
           <div className="buttons">
-            <button success>Submit</button>
-            <button onClick={cancel} error>
+            <button type='submit'>Submit</button>
+            <button onClick={cancel} >
               Cancel
             </button>
           </div>

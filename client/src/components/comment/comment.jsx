@@ -3,7 +3,6 @@ import React from "react";
 import "./comment.css";
 
 const Comment = (props) => {
-  //const [toggleComment, setToggle] = useState(false);
 
   return (
     <div className="comment">

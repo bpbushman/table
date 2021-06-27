@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useMutation } from "@apollo/client";
 import { useHistory } from "react-router-dom";
-import { Container, TextInput, Button } from "nes-react";
 
 import { AuthContext } from "../../util/context/context";
 import { LOGIN_USER } from "../../util/graphql/mutations";
@@ -51,9 +50,9 @@ const Login = () => {
   return (
     <div>
       <h3>Sign into your account 🔑</h3>
-      <Container className="login-container" rounded={true}>
+      <div className="login-container" rounded={true}>
         <form onSubmit={submitUser}>
-          <TextInput
+          <input
             type="text"
             placeholder="User name"
             name="username"
@@ -62,7 +61,7 @@ const Login = () => {
             onChange={handleChange}
           />
           <br />
-          <TextInput
+          <input
             type="password"
             placeholder="Password"
             name="password"
@@ -71,12 +70,12 @@ const Login = () => {
             onChange={handleChange}
           />
           <br />
-          <Button className="button" type="submit" primary>
+          <button className="button" type="submit" primary>
             {loading ? "...loading" : "submit"}
-          </Button>
+          </button>
         </form>
         <Errors errors={errors} />
-      </Container>
+      </div>
     </div>
   );
 };

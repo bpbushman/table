@@ -37,7 +37,7 @@ const Post = (props) => {
     setCommentToggle(!commentToggle);
   };
 
-
+  console.log(commentToggle)
   return (
     <div className="container">
       <h2>{props.username}</h2>
