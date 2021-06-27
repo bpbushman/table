@@ -2,7 +2,7 @@ import { useMutation } from "@apollo/client";
 import { useHistory } from "react-router-dom";
 import React, { useState, useContext } from "react";
 
-import { AuthContext} from "../../util/context/context";
+import { AuthContext } from "../../util/context/context";
 import { REGISTER_USER } from "../../util/graphql/mutations";
 import Errors from "../errors/errors";
 import "./signup.css";
@@ -21,7 +21,7 @@ const Signup = () => {
   const [register, { loading }] = useMutation(REGISTER_USER, {
     update(_, result) {
       console.log(result);
-      context.login(result.data.register)
+      context.login(result.data.register);
       history.push("/newsfeed");
     },
     variables: newUser,
@@ -81,7 +81,7 @@ const Signup = () => {
             value={newUser.password}
           />
           <br />
-          <inpu
+          <input
             type="password"
             placeholder="Confirm Password"
             name="confirmPassword"
@@ -89,7 +89,7 @@ const Signup = () => {
             value={newUser.confirmPassword}
           />
           <br />
-          <button primary>{loading ? "loading..." : "Submit"}</button>
+          <input type="submit" value={loading ? "loading..." : "submit"} />
         </form>
       </div>
       <Errors errors={errors} />

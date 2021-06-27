@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: max-content;
-  background-color: #51A7AD;
+  background-color: #e598d8;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -15,6 +15,4 @@
   margin: auto;
 }
 
-h3 {
-  margin: 24px;
-}
+

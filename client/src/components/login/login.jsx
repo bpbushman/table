@@ -50,7 +50,7 @@ const Login = () => {
   return (
     <div>
       <h3>Sign into your account 🔑</h3>
-      <div className="login-container" rounded={true}>
+      <div className="login-container">
         <form onSubmit={submitUser}>
           <input
             type="text"
@@ -70,12 +70,14 @@ const Login = () => {
             onChange={handleChange}
           />
           <br />
-          <button className="button" type="submit" primary>
-            {loading ? "...loading" : "submit"}
-          </button>
+          <input
+            type="submit"
+            className="button"
+            value={loading ? "loading..." : "submit"}
+          />
         </form>
-        <Errors errors={errors} />
       </div>
+      <Errors errors={errors} />
     </div>
   );
 };

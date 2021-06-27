@@ -1,9 +1,10 @@
 .errors-container {
   margin: 24px;
+  padding: 8px;
   color: red;
   width: min-content;
 }
 
 .errors-container li {
-  size: 12px;
+  size: 8px;
 }

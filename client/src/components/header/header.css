@@ -1,17 +1,11 @@
 .header {
   display: flex;
-  background-color: #F7A7BF;
+  background-color: #a0f8ee;
   justify-content: space-between;
-  margin: auto -16px;
-  padding: 4px 32px;
+  margin: auto -16px 24px -16px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  position: top 0px;
-}
-
-.header h1 {
-  font-size: xx-large;
-  color: whitesmoke;
-  font-weight: bold;
+  position: sticky;
+  top: 0;
 }
 
 
