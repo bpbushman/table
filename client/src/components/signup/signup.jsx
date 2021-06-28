@@ -53,7 +53,7 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div style={{margin: 'auto'}}>
       <h3>Register a new Account</h3>
       <div rounded="true" className="login-container">
         <form onSubmit={onSubmit}>

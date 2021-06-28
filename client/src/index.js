@@ -10,6 +10,7 @@ import {
 } from "@apollo/client";
 
 import { AuthProvider } from "./util/context/context";
+import Header from "./components/header/header.jsx";
 import App from "./App";
 
 const httpLink = createHttpLink({
@@ -34,6 +35,7 @@ ReactDOM.render(
   <BrowserRouter>
     <ApolloProvider client={client}>
       <AuthProvider>
+        <Header />
         <App />
       </AuthProvider>
     </ApolloProvider>
@@ -41,7 +43,7 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-/* 
+/*
   clean up layout
   fix bug with errors on post
 */

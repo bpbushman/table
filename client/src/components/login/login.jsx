@@ -48,7 +48,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div style={{margin: 'auto'}}>
       <h3>Sign into your account 🔑</h3>
       <div className="login-container">
         <form onSubmit={submitUser}>
