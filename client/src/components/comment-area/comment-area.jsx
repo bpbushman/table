@@ -42,7 +42,7 @@ const CommentArea = ({ id }) => {
           value={comment}
           placeholder="Add comment..."
         />
-        <input type="submit" onClick={handleSubmit}>Submit</input>
+        <input type="submit" value="submit" onClick={handleSubmit}/>
       </form>
       <Errors errors={errors} />
     </div>

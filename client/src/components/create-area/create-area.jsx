@@ -30,8 +30,8 @@ const Create = () => {
     event.preventDefault();
     createPost();
     setBody("");
-    setErrors({})
-    if(Object.keys(errors).length === 0) {
+    setErrors({});
+    if (Object.keys(errors).length === 0) {
       window.location.reload(false);
     }
   };
@@ -47,10 +47,8 @@ const Create = () => {
         <form onSubmit={submit}>
           <textarea onChange={handleChange} placeholder="Post" value={body} />
           <div className="buttons">
-            <button type='submit'>Submit</button>
-            <button onClick={cancel} >
-              Cancel
-            </button>
+            <input type="submit" value="submit" />
+            <input type="button" value="cancel" onClick={cancel} />
           </div>
         </form>
       </div>
