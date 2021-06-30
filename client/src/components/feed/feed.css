@@ -1,4 +1,9 @@
 .feed {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin: auto;
+}
+
+.feed h1 {
+  margin: 16px auto 16px auto !important
 }

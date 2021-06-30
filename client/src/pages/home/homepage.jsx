@@ -13,17 +13,17 @@ const HomePage = () => {
   return (
     <div>
       {context.user ? (
-        <div className="welcome">
-          <h2>👋🏿 Welcome {context.user.username}</h2>
+        <div className="home-page">
+          <h1>👋🏿 Welcome {context.user.username}</h1>
           <Create />
           <Feed />
-          <Footer />
         </div>
       ) : (
         <div>
           <LoggedOut />
         </div>
       )}
+      <Footer />
     </div>
   );
 };

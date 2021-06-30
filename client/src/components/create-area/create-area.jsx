@@ -42,16 +42,14 @@ const Create = () => {
   };
 
   return (
-    <div className="create">
-      <div className="create-box" title="Create a post!">
-        <form onSubmit={submit}>
-          <textarea onChange={handleChange} placeholder="Post" value={body} />
-          <div className="buttons">
-            <input type="submit" value="submit" />
-            <input type="button" value="cancel" onClick={cancel} />
-          </div>
-        </form>
-      </div>
+    <div className="create-box" title="Create a post!">
+      <form onSubmit={submit}>
+        <textarea onChange={handleChange} placeholder="Post" value={body} />
+        <div className="buttons">
+          <input type="submit" value="submit" />
+          <input type="button" value="cancel" onClick={cancel} />
+        </div>
+      </form>
       <Errors errors={errors} />
     </div>
   );

@@ -1,11 +1,23 @@
-.create {
-  margin: 40px !important;
-  width: 32%;
+.create-box {
+  border-radius: 8px;
+  border-style: solid;
+  padding: 8px;
+  width: max-content;
+  margin: auto;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.create-box input {
+  margin: 4px;
+  padding: 4px;
+}
+
+.create-box textarea {
+  padding: 4px;
 }
 
 .buttons {
   display: flex;
   flex-direction: row;
-  margin-top: 8px;
   justify-content: center;
+  margin-top: 8px;
 }

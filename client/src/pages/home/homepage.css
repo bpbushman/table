@@ -1,3 +1,8 @@
-.welcome h2 {
-    margin: 24px;
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-page h1 {
+    margin: 0 auto 16px auto
 }
