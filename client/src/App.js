@@ -10,7 +10,6 @@ const App = () => {
 
   return (
     <div>
-      
       <Switch>
         <AuthRoute exact path="/" component={AuthPage} />
         <Route exact path="/newsfeed" component={HomePage} />

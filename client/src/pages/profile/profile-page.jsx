@@ -5,7 +5,7 @@ import { Sprite } from "nes-react";
 import { AuthContext } from "../../util/context/context";
 import { GET_USER } from "../../util/graphql/queries";
 
-const ProfilePage = () => {
+const ProfilePage = ()  => {
   const { user } = useContext(AuthContext);
   
   const { loading, data } = useQuery(GET_USER, {
@@ -13,7 +13,7 @@ const ProfilePage = () => {
     fetchPolicy: "no-cache",
   });
 
-  if(loading) return <h1>loading....</h1>
+  
   const { banner, bio, username } = data.getUser;
 
   return loading ? (<h1>loading....</h1>) : (
