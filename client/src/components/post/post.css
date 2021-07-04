@@ -1,18 +1,34 @@
 .container {
   margin: 16px;
-  
   border: 2px solid black;
   border-radius: 4px;
   background-color: whitesmoke;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  width: 480px;
+  width: 20rem;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
 }
+.post-tile {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: max-content;
+  padding: 8px;
+  
+}
+.post-tile p {
+  margin: 5px;
+  font-size: xx-small;
+  color: gray;
+}
 
 .post-body {
   padding: 24px;
+  background-color: white;
+}
+.post-body p {
+  margin: 12px 8px 12px 8px;
 }
 
 .comment-styles {
@@ -22,16 +38,13 @@
 .comment-button:hover {
   color: grey
 }
-.container h2 {
-  text-align: center;
-  padding: 8px;
-}
 
 .button-area {
   padding-left: 32px;
   padding-right: 32px;
   width: 100% ;
   border-top: 1px solid, black;
+  background-color: white;
   font-size: 12px;
   display: flex;
   justify-content: space-between;

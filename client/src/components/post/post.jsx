@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import dateformat from 'dateformat';
+import dateformat from "dateformat";
 
 import { AuthContext } from "../../util/context/context";
 import Comment from "../comment/comment";
@@ -23,8 +23,8 @@ const mapCommentsToComponent = (data) => {
 };
 
 const formatTimeStamp = (date) => {
-  return dateformat(date,"mmmm dS, yyyy")
-}
+  return dateformat(date, "mmmm dS, yyyy");
+};
 
 const Post = (props) => {
   const currentUser = useContext(AuthContext);
@@ -37,11 +37,14 @@ const Post = (props) => {
     setCommentToggle(!commentToggle);
   };
 
-  console.log(commentToggle)
+  console.log(commentToggle);
   return (
     <div className="container">
-      <h2>{props.username}</h2>
-      <h5>⏱ {formatTimeStamp(props.timeStamp)}</h5>
+      <div className="post-tile">
+        <h4>{props.username}</h4>
+        <p>⏱ {formatTimeStamp(props.timeStamp)}</p>
+      </div>
+
       <p className="post-body">{props.body}</p>
       <div className="button-area">
         <Like likes={props.likes} id={props.id} />
